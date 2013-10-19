@@ -40,6 +40,7 @@ var webdriverjs = require('webdriverjs'),
 describe('my webdriverjs tests', function(){
     this.timeout(99999999);
     before(function(){
+            var options = { desiredCapabilities: { browserName:'firefox' } };
             client = webdriverjs.remote(options);
             client.init();
     });
@@ -99,7 +100,7 @@ Default: *true*
 ## <img src="http://a0.twimg.com/profile_images/794342508/Logo_Square.png" width="48" /> [Sauce Labs](https://saucelabs.com/) support
 To run your tests via Sauce Labs, add the following attributes to your option
 object. If you are using Webdriverjs in a public repository, never publish your
-Sauce Labs key! Export these informations as enviroment variables.
+Sauce Labs key! Export this information as enviroment variables.
 
 ```js
 host: 'ondemand.saucelabs.com', // Sauce Labs remote host
